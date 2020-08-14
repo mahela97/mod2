@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Answer</title>
 	<style>
-		*{
+		* {
 			box-sizing: border-box;
 		}
-		div {
+
+		.row{
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+
+		div>section {
 			border: 2px solid black;
 			background-color:#999999;
 			margin: 10px;
-			width: 30%;
-			float: left;
 			
 		}
 		header {
@@ -22,15 +28,15 @@
 			margin-bottom: 50px;
 		}
 
-		div>div{
+		div>section>div{
 			padding: 5px;
 			float: right;
-			margin: 0px;
+			border: 2px solid black;
 			border-right: 0px;
 			border-top: 0px;
 			text-align: center;
-			min-width: fit-content;
-			max-width: 26%;
+			min-width: 25%;
+			max-width: fit-content;
 			font-weight: bold;
 			font-family: Georgia, 'Times New Roman', Times, serif;
 			
@@ -50,39 +56,55 @@
 		}
 		p{
 			clear: both;
-			padding-left: 10px;
-			padding-right: 10px;
+			padding-left: 5px;
+			padding-right: 5px;
 		}
 /*desktop*/
 		@media (min-width: 992px){
-
+			.col-lg-4{
+				width: 30%;
+				float: left;
+			}
 		}
 
 /*tablet*/
 		@media (min-width:768px) and (max-width:991px){
+			.col-md-6{
+				width:47%;
+				float: left;
+			}
 
+			.col-md-12{
+				float: left;
+			}
 		}
 
 /*mobile*/
 		@media (max-width:767px){
-
+			.col-sm-12{
+				width: 100%;
+				float: left;
+			}
 		}
 	</style>
 
 </head>
 <body>
 	<header>Our Menu</header>
-	<div>
-		<div id="chicken">Chicken</div>
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente atque quasi dolorem quod perspiciatis. Obcaecati rem perspiciatis autem aliquam doloremque accusamus, omnis natus velit neque sequi inventore cum maiores laudantium.</p>
+	<div class="row">
+		<section class="col-lg-4 col-md-6 col-sm-12">
+			<div id="chicken">Chicken</div>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente atque quasi dolorem quod perspiciatis. Obcaecati rem perspiciatis autem aliquam doloremque accusamus, omnis natus velit neque sequi inventore cum maiores laudantium.</p>
+		</section>
+		<section class="col-lg-4 col-md-6 col-sm-12">
+			<div id="beef">Beef</div>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente atque quasi dolorem quod perspiciatis. Obcaecati rem perspiciatis autem aliquam doloremque accusamus, omnis natus velit neque sequi inventore cum maiores laudantium.</p>
+		</section>
+		<section class="col-lg-4 col-md-12 col-sm-12">
+			<div id="sushi">Sushi</div>
+			<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente atque quasi dolorem quod perspiciatis. Obcaecati rem perspiciatis autem aliquam doloremque accusamus, omnis natus velit neque sequi inventore cum maiores laudantium.</p>
+		</section>
 	</div>
-	<div>
-		<div id="beef">Beef</div>
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente atque quasi dolorem quod perspiciatis. Obcaecati rem perspiciatis autem aliquam doloremque accusamus, omnis natus velit neque sequi inventore cum maiores laudantium.</p>
-	</div>
-	<div>
-		<div id="sushi">Sushi</div>
-		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente atque quasi dolorem quod perspiciatis. Obcaecati rem perspiciatis autem aliquam doloremque accusamus, omnis natus velit neque sequi inventore cum maiores laudantium.</p>
-	</div>
+	
 </body>
 </html>
